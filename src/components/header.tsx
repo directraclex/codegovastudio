@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/products", label: "Products" },
-  { href: "/team", label: "Team" },
+  { href: "/courses", label: "Courses" },
   { href: "/#faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
@@ -27,7 +27,7 @@ export function Header() {
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
+        "text-sm font-medium transition-colors duration-300 hover:text-primary",
         pathname === href ? "text-primary" : "text-muted-foreground"
       )}
       onClick={() => setIsMobileMenuOpen(false)}

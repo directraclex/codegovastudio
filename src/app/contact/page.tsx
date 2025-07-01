@@ -11,8 +11,8 @@ const contactInfo = [
   {
     icon: <Mail className="h-8 w-8 text-primary" />,
     title: "Email Us",
-    content: "hello@kree8.agency",
-    href: "mailto:hello@kree8.agency",
+    content: "support@devco.site",
+    href: "mailto:support@devco.site",
   },
   {
     icon: <Phone className="h-8 w-8 text-primary" />,

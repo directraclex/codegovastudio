@@ -200,9 +200,9 @@ export default function Home() {
       >
         <div className="mx-auto grid max-w-5xl items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <div key={service.title} className="relative group overflow-hidden rounded-xl p-px bg-gradient-to-b from-border to-transparent">
+            <div key={service.title} className="relative group overflow-hidden rounded-xl p-px bg-gradient-to-b from-border to-transparent transition-all duration-300 ease-in-out hover:-translate-y-2">
               <div className="rounded-xl bg-card h-full p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-background">
-                <div className="rounded-full p-4 bg-secondary mb-4 border border-border group-hover:border-primary transition-colors duration-300">
+                <div className="rounded-full p-4 bg-secondary mb-4 border border-border group-hover:border-primary transition-all duration-300 group-hover:scale-110">
                     {service.icon}
                 </div>
                 <h3 className="font-headline text-xl font-bold mb-2">{service.title}</h3>
@@ -221,7 +221,7 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {advantages.map((advantage) => (
-              <div key={advantage.title} className="relative group overflow-hidden rounded-lg p-px bg-gradient-to-b from-white/10 to-transparent transition-all duration-300 hover:bg-white/20">
+              <div key={advantage.title} className="relative group overflow-hidden rounded-lg p-px bg-gradient-to-b from-white/10 to-transparent transition-all duration-300 ease-in-out hover:bg-white/20 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10">
                 <div className="rounded-lg bg-background p-6 h-full flex flex-col items-center text-center transition-all duration-300 group-hover:bg-card">
                   {advantage.icon}
                   <h3 className="font-headline text-xl font-bold">{advantage.title}</h3>
@@ -260,7 +260,7 @@ export default function Home() {
                     width={600}
                     height={400}
                     alt="Featured Product: Kree8 CMS"
-                    className="relative w-full rounded-xl shadow-2xl"
+                    className="relative w-full rounded-xl shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
             </div>
           </div>
@@ -277,7 +277,7 @@ export default function Home() {
           <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-primary via-accent to-primary animate-pulse -translate-y-1/2 hidden md:block" aria-hidden="true"></div>
           <div className="relative grid gap-10 md:grid-cols-3">
              {processSteps.map((step) => (
-                <div key={step.title} className="relative flex flex-col items-center text-center space-y-4 p-6 rounded-xl transition-all duration-300 hover:bg-card/50">
+                <div key={step.title} className="relative flex flex-col items-center text-center space-y-4 p-6 rounded-xl transition-all duration-300 ease-in-out hover:bg-card/50 hover:-translate-y-2">
                     <div className="flex items-center justify-center size-20 rounded-full bg-background border-2 border-accent mb-4 z-10 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-110">
                         {step.icon}
                     </div>
@@ -297,7 +297,7 @@ export default function Home() {
       >
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {portfolio.map((project) => (
-            <Card key={project.title} className="overflow-hidden group relative transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
+            <Card key={project.title} className="overflow-hidden group relative transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
               <div className="overflow-hidden">
                 <Image
                   src={project.image}
@@ -305,7 +305,7 @@ export default function Home() {
                   width="600"
                   height="400"
                   alt={project.title}
-                  className="aspect-video object-cover w-full group-hover:scale-105 transition-transform duration-300"
+                  className="aspect-video object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -337,8 +337,8 @@ export default function Home() {
       >
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl mx-auto">
           {techStack.map(tech => (
-            <div key={tech} className="relative group overflow-hidden rounded-lg p-px bg-gradient-to-b from-border to-transparent">
-              <div className="flex items-center justify-center gap-2 rounded-lg bg-card px-4 py-2 transition-all duration-300 group-hover:bg-background">
+            <div key={tech} className="relative group overflow-hidden rounded-lg p-px bg-gradient-to-b from-border to-transparent transition-all duration-300 ease-in-out hover:-translate-y-1">
+              <div className="flex items-center justify-center gap-2 rounded-lg bg-card px-4 py-2 transition-all duration-300 group-hover:bg-background group-hover:shadow-md group-hover:shadow-accent/20">
                 <span className="font-semibold text-muted-foreground group-hover:text-foreground transition-colors duration-300">{tech}</span>
               </div>
             </div>
@@ -360,7 +360,7 @@ export default function Home() {
                 {testimonials.map((testimonial, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-2 h-full">
-                            <Card className="flex flex-col justify-between h-full p-6 bg-background border-border/50">
+                            <Card className="flex flex-col justify-between h-full p-6 bg-background border-border/50 transition-colors duration-300 hover:border-primary/50">
                                 <div>
                                     <Quote className="size-8 text-primary/50 mb-4" />
                                     <p className="text-muted-foreground mb-6 flex-grow">"{testimonial.quote}"</p>
