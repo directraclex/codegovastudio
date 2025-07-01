@@ -114,12 +114,12 @@ const TechIcon = ({ name }: { name: string }) => (
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="w-full py-20 md:py-32 lg:py-40 bg-card">
+      <section className="w-full py-20 md:py-32 lg:py-40 bg-card/50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[size:200%_auto] animate-text-shimmer">
                   Scripts & CMS for the Modern Web
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -174,7 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="featured-product" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+      <section id="featured-product" className="w-full py-12 md:py-24 lg:py-32 bg-card/50">
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
              <div className="relative group">
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               <Badge variant="secondary">Product Spotlight</Badge>
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl bg-gradient-to-r from-slate-200 via-slate-400 to-slate-200 bg-clip-text text-transparent bg-[size:200%_auto] animate-text-shimmer">
                 Kree8 CMS: The Developer-First Headless CMS
               </h2>
               <p className="text-muted-foreground md:text-lg">
@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-us" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="why-us" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">The Kree8 Advantage</h2>
@@ -230,7 +230,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+      <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32 bg-card/50">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -269,7 +269,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Trusted by Developers</h2>
@@ -310,7 +310,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="tech-stack" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+      <section id="tech-stack" className="w-full py-12 md:py-24 lg:py-32 bg-card/50">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Built With Modern Technologies</h2>
@@ -329,7 +329,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Get Started in Minutes</h2>
@@ -353,7 +353,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-card">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-card/50">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">

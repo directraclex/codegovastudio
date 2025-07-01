@@ -85,10 +85,20 @@ export default {
             height: '0',
           },
         },
+        'gradient-bg': {
+            '0%, 100%': { backgroundPosition: '0% 50%' },
+            '50%': { backgroundPosition: '100% 50%' },
+        },
+        'text-shimmer': {
+            'from': { backgroundPosition: '200% 0' },
+            'to': { backgroundPosition: '-200% 0' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'gradient-bg': 'gradient-bg 15s ease infinite',
+        'text-shimmer': 'text-shimmer 5s linear infinite',
       },
     },
   },

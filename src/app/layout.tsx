@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={cn('min-h-screen bg-background font-body antialiased', lato.variable, syne.variable)}>
-        <div className="relative flex min-h-dvh flex-col bg-background">
+        <div className="relative flex min-h-dvh flex-col bg-background bg-[linear-gradient(-45deg,hsl(var(--background)),hsl(var(--card)),hsl(var(--background)),hsl(var(--secondary)))] bg-[size:400%_400%] animate-gradient-bg">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
