@@ -1,29 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code, Palette, Rocket, Bot, ArrowRight, Star } from 'lucide-react';
+import { Code, Palette, Rocket, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const services = [
   {
     icon: <Code className="size-8 text-primary" />,
-    title: 'Web Development',
-    description: 'Crafting high-performance websites and applications with cutting-edge technology.',
+    title: 'Powerful Scripts',
+    description: 'High-performance scripts and utilities to supercharge your applications.',
   },
   {
     icon: <Palette className="size-8 text-primary" />,
-    title: 'UI/UX Design',
-    description: 'Designing intuitive and beautiful user experiences that engage and delight your audience.',
+    title: 'Headless CMS',
+    description: 'Flexible and scalable content management solutions for any frontend.',
   },
   {
     icon: <Rocket className="size-8 text-primary" />,
-    title: 'Digital Strategy',
-    description: 'Building data-driven strategies to launch and grow your digital products effectively.',
-  },
-  {
-    icon: <Bot className="size-8 text-primary" />,
-    title: 'AI Integration',
-    description: 'Leveraging artificial intelligence to create smarter, more efficient business solutions.',
+    title: 'Full-Stack Solutions',
+    description: 'Complete, ready-to-deploy solutions for complex business needs.',
   },
 ];
 
@@ -57,18 +52,18 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  We Build The Future of Digital
+                  Scripts & CMS for the Modern Web
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Kree8 is a design and development agency that partners with ambitious brands to create exceptional digital products and experiences.
+                  Kree8 provides robust scripts and powerful CMS solutions to build exceptional digital products and experiences.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="/contact">Get in Touch</Link>
+                  <Link href="/products">Explore Products</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                  <Link href="/portfolio">Our Work</Link>
+                  <Link href="/contact">Get in Touch</Link>
                 </Button>
               </div>
             </div>
@@ -88,14 +83,14 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Services</div>
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Do</h2>
+              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Products</div>
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Build</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                From concept to launch, we provide the expertise to bring your vision to life.
+                From standalone scripts to full-featured CMS solutions, we have you covered.
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-2 xl:grid-cols-2 mt-12">
+          <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
             {services.map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-row items-center gap-4">
@@ -115,10 +110,10 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Portfolio</div>
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Featured Work</h2>
+              <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Our Showcase</div>
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Featured Implementations</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Check out some of the amazing projects we've delivered for our clients.
+                Check out how our products have been used to create amazing projects.
               </p>
             </div>
           </div>
@@ -157,12 +152,12 @@ export default function Home() {
               Ready to build something amazing?
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Let's talk about your project and how we can help you achieve your goals.
+              Explore our products and find the perfect solution for your next project.
             </p>
           </div>
           <div className="mx-auto w-full max-w-sm space-y-2">
             <Button asChild size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Start a Project</Link>
+              <Link href="/products">Browse Products</Link>
             </Button>
           </div>
         </div>
