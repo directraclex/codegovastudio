@@ -16,6 +16,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        'grid-pattern': 'linear-gradient(to right, hsl(var(--border)_/_0.2) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--border)_/_0.2) 1px, transparent 1px)',
+      },
       fontFamily: {
         body: ['var(--font-lato)', 'sans-serif'],
         headline: ['var(--font-syne)', 'sans-serif'],
@@ -85,29 +88,20 @@ export default {
             height: '0',
           },
         },
-        'gradient-bg': {
-            '0%, 100%': { backgroundPosition: '0% 50%' },
-            '50%': { backgroundPosition: '100% 50%' },
-        },
         'text-shimmer': {
             'from': { backgroundPosition: '200% 0' },
             'to': { backgroundPosition: '-200% 0' },
         },
-        'slow-glow': {
-          '0%, 100%': { opacity: '0.2', transform: 'scale(1)' },
-          '50%': { opacity: '0.4', transform: 'scale(1.05)' },
+        'aurora': {
+          from: { backgroundPosition: '50% 50%, 50% 50%' },
+          to: { backgroundPosition: '350% 50%, 350% 50%' },
         },
-        'border-spin': {
-          '100%': { transform: 'rotate(360deg)' },
-        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'gradient-bg': 'gradient-bg 15s ease infinite',
         'text-shimmer': 'text-shimmer 5s linear infinite',
-        'slow-glow': 'slow-glow 8s ease-in-out infinite alternate',
-        'border-spin': 'border-spin 7s linear infinite',
+        'aurora': 'aurora 60s infinite',
       },
     },
   },

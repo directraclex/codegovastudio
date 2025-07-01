@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Our Portfolio - Kree8 Reimagined',
+    title: 'Our Portfolio - CodeGova',
     description: 'Discover the innovative projects and success stories from our work with leading brands.',
 };
 
@@ -57,7 +57,7 @@ export default function PortfolioPage() {
     return (
         <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
             <div className="text-center mb-16">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                     Our Work
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -67,26 +67,25 @@ export default function PortfolioPage() {
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
-                    <Card key={project.title} className="group overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
-                        <div className="overflow-hidden">
-                             <Image
-                                src={project.image}
-                                data-ai-hint={project.hint}
-                                alt={project.title}
-                                width={600}
-                                height={400}
-                                className="w-full h-auto object-cover aspect-video transition-transform duration-500 ease-in-out group-hover:scale-105"
-                            />
+                    <Card key={project.title} className="group relative overflow-hidden rounded-xl bg-card/50 border-white/10 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
+                       <Image
+                           src={project.image}
+                           data-ai-hint={project.hint}
+                           alt={project.title}
+                           width={600}
+                           height={400}
+                           className="w-full h-auto object-cover aspect-video transition-transform duration-500 ease-in-out group-hover:scale-105"
+                       />
+                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                        <div className="absolute bottom-0 left-0 p-6">
+                            <h3 className="font-headline text-2xl font-bold text-white">{project.title}</h3>
+                            <p className="mt-2 text-white/80">{project.description}</p>
+                            <div className="flex flex-wrap gap-2 mt-4">
+                                {project.tags.map(tag => (
+                                    <Badge key={tag} variant="secondary" className="bg-white/10 text-white/90 border-none">{tag}</Badge>
+                                ))}
+                            </div>
                         </div>
-                        <CardContent className="p-6">
-                            <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
-                            <p className="mt-2 text-muted-foreground">{project.description}</p>
-                        </CardContent>
-                        <CardFooter className="flex flex-wrap gap-2 px-6 pb-6">
-                            {project.tags.map(tag => (
-                                <Badge key={tag} variant="secondary">{tag}</Badge>
-                            ))}
-                        </CardFooter>
                     </Card>
                 ))}
             </div>

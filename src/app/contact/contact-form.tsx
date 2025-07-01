@@ -13,7 +13,7 @@ import { ArrowRight } from "lucide-react";
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+    <Button type="submit" disabled={pending} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
       {pending ? "Sending..." : "Send Message"}
       {!pending && <ArrowRight className="ml-2 h-4 w-4" />}
     </Button>

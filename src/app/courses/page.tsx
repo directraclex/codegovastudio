@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import type { Metadata } from 'next';
 import { cn } from "@/lib/utils";
+import { Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: 'Courses - Kree8 Reimagined',
+    title: 'Courses - CodeGova',
     description: 'Upskill with our expert-led tech courses. From Next.js to AI, master the tools of modern development.',
 };
 
@@ -80,11 +81,11 @@ const courses = [
         price: "$179",
     },
     {
-        title: "Headless CMS with Kree8 CMS",
+        title: "Headless CMS with CodeGova CMS",
         description: "Master content modeling and delivery using our powerful, Git-based headless CMS.",
         image: "https://placehold.co/600x400.png",
         hint: "content management system",
-        tags: ["CMS", "Headless", "Kree8"],
+        tags: ["CMS", "Headless", "CodeGova"],
         price: "$79",
     },
     {
@@ -152,7 +153,7 @@ export default function CoursesPage() {
     return (
         <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
             <div className="text-center mb-16">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                     Our Courses
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -166,7 +167,7 @@ export default function CoursesPage() {
                     const whatsappUrl = `${whatsappBaseUrl}?text=${whatsappMessage}`;
                     
                     return (
-                        <Card key={course.title} className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
+                        <Card key={course.title} className="group flex flex-col overflow-hidden bg-card/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 border-white/10">
                             <div className="relative overflow-hidden">
                                 <Image
                                     src={course.image}
@@ -178,7 +179,7 @@ export default function CoursesPage() {
                                 />
                                 {course.isHot && (
                                     <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground border-none animate-pulse">
-                                        HOT
+                                       <Sparkles className="mr-1.5 size-3" /> HOT
                                     </Badge>
                                 )}
                             </div>

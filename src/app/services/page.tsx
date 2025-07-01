@@ -3,7 +3,7 @@ import { Code, Palette, Rocket, Bot, Database, Shield } from "lucide-react";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Our Services - Kree8 Reimagined',
+    title: 'Our Services - CodeGova',
     description: 'Explore the wide range of digital services we offer to bring your vision to life.',
 };
 
@@ -44,7 +44,7 @@ export default function ServicesPage() {
     return (
         <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
             <div className="text-center mb-16">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                     Our Services
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -54,10 +54,10 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {services.map((service) => (
-                    <Card key={service.title} className="flex flex-col text-center items-center p-8 transition-transform transform hover:-translate-y-2 hover:shadow-xl duration-300">
-                        {service.icon}
+                    <Card key={service.title} className="group flex flex-col text-center items-center p-8 bg-card/50 border-white/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/20">
+                        <div className="transition-transform duration-300 group-hover:scale-110">{service.icon}</div>
                         <CardHeader className="p-0">
-                            <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
+                            <CardTitle className="font-headline text-2xl mt-4">{service.title}</CardTitle>
                         </CardHeader>
                         <CardContent className="p-0 mt-4">
                             <CardDescription className="text-base text-muted-foreground">{service.description}</CardDescription>

@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Our Products - Kree8 Reimagined',
+    title: 'Our Products - CodeGova',
     description: 'Explore our collection of powerful scripts and CMS solutions.',
 };
 
@@ -19,7 +20,7 @@ const products = [
         price: "$49",
     },
     {
-        title: "Kree8 CMS",
+        title: "CodeGova CMS",
         description: "A flexible, Git-based headless CMS for developers who love Markdown.",
         image: "https://placehold.co/600x400.png",
         hint: "content management",
@@ -64,7 +65,7 @@ export default function ProductsPage() {
     return (
         <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32">
             <div className="text-center mb-16">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                <h1 className="font-headline text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                     Our Products
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -74,7 +75,7 @@ export default function ProductsPage() {
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {products.map((product) => (
-                    <Card key={product.title} className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
+                    <Card key={product.title} className="group flex flex-col overflow-hidden bg-card/50 transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 border-white/10">
                         <div className="overflow-hidden">
                              <Image
                                 src={product.image}
@@ -98,8 +99,8 @@ export default function ProductsPage() {
                         </CardContent>
                         <CardFooter className="flex items-center justify-between">
                             <p className="text-2xl font-bold text-primary">{product.price}</p>
-                            <Button className="bg-accent hover:bg-accent/90">
-                                Learn More
+                            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                                <Link href="#">Learn More</Link>
                             </Button>
                         </CardFooter>
                     </Card>

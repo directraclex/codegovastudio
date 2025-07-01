@@ -14,14 +14,14 @@ const lato = Lato({
 
 const syne = Syne({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-syne',
 });
 
 
 export const metadata: Metadata = {
-  title: 'Kree8 Reimagined - Scripts & CMS Solutions',
-  description: 'High-quality scripts and CMS solutions for the modern web.',
+  title: 'CodeGova - Next-Gen Scripts & CMS Solutions',
+  description: 'High-quality scripts and CMS solutions for the modern web. Built by CodeGova.',
 };
 
 export default function RootLayout({
@@ -32,7 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={cn('min-h-screen bg-background font-body antialiased', lato.variable, syne.variable)}>
-        <div className="relative flex min-h-dvh flex-col bg-background bg-[linear-gradient(-45deg,hsl(var(--background)),hsl(var(--card)),hsl(var(--background)),hsl(var(--secondary)))] bg-[size:400%_400%] animate-gradient-bg">
+        <div className="relative flex min-h-dvh flex-col">
+           <div className="fixed top-0 left-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,hsl(var(--primary)_/_0.1),transparent_50%)]"></div>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

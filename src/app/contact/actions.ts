@@ -34,7 +34,7 @@ export async function submitContactForm(prevState: State, formData: FormData): P
   // In a real application, you would use a service like Resend or Nodemailer
   // to send the email to the specified address.
   // For this prototype, we'll log the action to the console.
-  console.log(`Simulating sending email to support@devco.site`);
+  console.log(`Simulating sending email to support@codegova.site`);
   console.log("Contact form submitted:", validatedFields.data);
 
   return {

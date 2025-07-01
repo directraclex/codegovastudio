@@ -1,8 +1,8 @@
 export const Logo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
-      width="100"
+      width="130"
       height="32"
-      viewBox="0 0 100 32"
+      viewBox="0 0 130 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
@@ -15,7 +15,7 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => (
         fontWeight="bold"
         fill="currentColor"
       >
-        Kree8
+        CodeGova
       </text>
     </svg>
   );

@@ -1,6 +1,6 @@
-# Kree8 Reimagined
+# CodeGova
 
-This is a Next.js project for Kree8 Reimagined, a modern software development agency.
+This is a Next.js project for CodeGova, a modern software development agency providing scripts and CMS solutions.
 
 To get started, run the development server:
 
