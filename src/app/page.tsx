@@ -141,7 +141,7 @@ export default function Home() {
               width="600"
               height="500"
               alt="Hero"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 animate-slow-glow"></div>
                 <Image
                     src="https://placehold.co/600x400.png"
                     data-ai-hint="cms dashboard"
@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-us" className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
+      <section id="why-us" className="w-full py-12 md:py-24 lg:py-32 bg-transparent bg-[radial-gradient(ellipse_at_center,hsl(var(--secondary)),transparent_60%)]">
         <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">The Kree8 Advantage</h2>
@@ -243,7 +243,7 @@ export default function Home() {
           </div>
           <div className="mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
             {portfolio.map((project, index) => (
-              <Card key={index} className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:border-primary/50">
+              <Card key={index} className="overflow-hidden group transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:border-primary">
                 <Image
                   src={project.image}
                   data-ai-hint={project.hint}
@@ -310,7 +310,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="tech-stack" className="w-full py-12 md:py-24 lg:py-32 bg-card/50">
+      <section id="tech-stack" className="w-full py-12 md:py-24 lg:py-32 bg-card/50 bg-[radial-gradient(ellipse_at_top,hsl(var(--secondary)),transparent_70%)]">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Built With Modern Technologies</h2>
@@ -342,7 +342,7 @@ export default function Home() {
              <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent hidden md:block animate-pulse -translate-y-1/2"></div>
              {processSteps.map((step, index) => (
                 <div key={index} className="relative flex flex-col items-center text-center space-y-4">
-                    <div className="flex items-center justify-center size-20 rounded-full bg-card border-2 border-accent mb-4 z-10">
+                    <div className="flex items-center justify-center size-20 rounded-full bg-card border-2 border-accent mb-4 z-10 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-110">
                         {step.icon}
                     </div>
                     <h3 className="font-headline text-xl font-bold">{step.title}</h3>
