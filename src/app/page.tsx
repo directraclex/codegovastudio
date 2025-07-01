@@ -7,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { HeroTitle } from '@/components/hero-title';
 
 const SectionWrapper = ({ id, children, className }: { id?: string; children: React.ReactNode; className?: string }) => (
   <section id={id} className={cn("w-full py-20 md:py-28 lg:py-32", className)}>
@@ -28,17 +29,17 @@ export default function Home() {
     {
       icon: <Code className="size-8 text-primary" />,
       title: 'Powerful Scripts',
-      description: 'High-performance scripts and utilities to supercharge your applications.',
+      description: 'High-performance, secure, and easy-to-integrate scripts that supercharge your applications and save you valuable development time.',
     },
     {
       icon: <Palette className="size-8 text-primary" />,
       title: 'Headless CMS',
-      description: 'Flexible and scalable content management solutions for any frontend.',
+      description: 'A developer-first, Git-based headless CMS that offers unparalleled flexibility and scalability for your content-driven projects.',
     },
     {
       icon: <Rocket className="size-8 text-primary" />,
       title: 'Full-Stack Solutions',
-      description: 'Complete, ready-to-deploy solutions for complex business needs.',
+      description: 'Complete, ready-to-deploy web solutions, from authentication kits to e-commerce platforms, built for modern technology stacks.',
     },
   ];
 
@@ -117,9 +118,7 @@ export default function Home() {
               <Sparkles className="mr-2 size-4" />
               Next-Gen Scripts & Solutions
             </Badge>
-            <h1 className="font-headline text-5xl font-extrabold tracking-tighter sm:text-6xl lg:text-7xl xl:text-8xl/none bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
-              Build Better, Faster, Smarter.
-            </h1>
+            <HeroTitle />
             <p className="mx-auto mt-6 max-w-[700px] text-muted-foreground md:text-xl">
               High-quality scripts and CMS solutions designed for modern developers. Stop reinventing the wheel and start building what matters.
             </p>
@@ -138,7 +137,9 @@ export default function Home() {
       <SectionWrapper className="bg-card/50">
         <SectionTitle>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What We Build</h2>
-          <p className="max-w-[700px] text-muted-foreground md:text-xl">From standalone scripts to full-featured CMS solutions, we have you covered.</p>
+          <p className="max-w-[900px] text-muted-foreground md:text-xl">
+            We craft robust digital tools and solutions that empower developers and businesses. Our products are built with precision, designed for scalability, and backed by expert support to ensure you succeed.
+          </p>
         </SectionTitle>
         <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
