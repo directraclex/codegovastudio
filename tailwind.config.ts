@@ -94,16 +94,20 @@ export default {
             'to': { backgroundPosition: '-200% 0' },
         },
         'slow-glow': {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.03)' },
+          '0%, 100%': { opacity: '0.2', transform: 'scale(1)' },
+          '50%': { opacity: '0.4', transform: 'scale(1.05)' },
         },
+        'border-spin': {
+          '100%': { transform: 'rotate(360deg)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient-bg': 'gradient-bg 15s ease infinite',
         'text-shimmer': 'text-shimmer 5s linear infinite',
-        'slow-glow': 'slow-glow 6s ease-in-out infinite',
+        'slow-glow': 'slow-glow 8s ease-in-out infinite alternate',
+        'border-spin': 'border-spin 7s linear infinite',
       },
     },
   },
