@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={cn('min-h-screen bg-background font-body antialiased', lato.variable, syne.variable)}>
         <div className="relative flex min-h-dvh flex-col">
-           <div className="fixed top-0 left-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,hsl(var(--primary)_/_0.1),transparent_50%)]"></div>
+           <div className="fixed top-0 left-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,hsl(var(--primary)_/_0.08),transparent_60%)]"></div>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
